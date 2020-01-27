@@ -18,6 +18,8 @@ struct UsersView: View {
             }
             .navigationBarTitle("Users")
         }
+        .edgesIgnoringSafeArea(.top)
+        .onAppear(perform: { self.viewModel.apply(.onAppear)} )
     }
 }
 

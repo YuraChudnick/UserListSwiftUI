@@ -15,7 +15,7 @@ enum UsersRequest: RequestType {
     case usersList(quantity: Int)
     case pagination(page: Int, quantity: Int)
     
-    var url: String {
+    var baseUrl: String {
         return "https://randomuser.me"
     }
     
@@ -32,6 +32,17 @@ enum UsersRequest: RequestType {
                     .init(name: "results", value: "\(quantity)"),
                     .init(name: "seed", value: "abc")]
         }
+    }
+    
+    func asURLRequest() -> URLRequest? {
+        guard let pathURL = URL(string: path, relativeTo: URL(string: baseUrl)), var urlComponents = URLComponents(url: pathURL, resolvingAgainstBaseURL: true) else {
+            return nil
+        }
+        urlComponents.queryItems = queryItems
+        guard let finalURL = urlComponents.url else { return nil }
+        var request = URLRequest(url: finalURL)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        return request
     }
     
 }
