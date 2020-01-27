@@ -11,7 +11,7 @@ import SwiftUI
 struct AppView: View {
     var body: some View {
         TabView {
-            UsersView()
+            UsersView(viewModel: .init())
                 .tabItem {
                     Image(systemName: "person.2.fill")
                     Text("Users")

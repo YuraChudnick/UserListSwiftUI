@@ -25,7 +25,12 @@
 		CDD5343523DB1125009C4545 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5343123DB1125009C4545 /* String+Extension.swift */; };
 		CDD5343623DB1125009C4545 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5343223DB1125009C4545 /* Path.swift */; };
 		CDD5343723DB1125009C4545 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5343323DB1125009C4545 /* Array+Extension.swift */; };
-		CDD5343B23DB1291009C4545 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5343A23DB1291009C4545 /* ItemRow.swift */; };
+		CDD5343B23DB1291009C4545 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5343A23DB1291009C4545 /* UserRow.swift */; };
+		CDD5343E23DEFB40009C4545 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5343D23DEFB40009C4545 /* UsersViewModel.swift */; };
+		CDD5344F23DF0832009C4545 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5344E23DF0832009C4545 /* APIService.swift */; };
+		CDD5345123DF0865009C4545 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345023DF0865009C4545 /* APIServiceError.swift */; };
+		CDD5345323DF0918009C4545 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345223DF0918009C4545 /* UsersResponse.swift */; };
+		CDD5345523DF095E009C4545 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345423DF095E009C4545 /* UsersRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +56,12 @@
 		CDD5343123DB1125009C4545 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CDD5343223DB1125009C4545 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		CDD5343323DB1125009C4545 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		CDD5343A23DB1291009C4545 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		CDD5343A23DB1291009C4545 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		CDD5343D23DEFB40009C4545 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		CDD5344E23DF0832009C4545 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CDD5345023DF0865009C4545 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		CDD5345223DF0918009C4545 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
+		CDD5345423DF095E009C4545 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +106,9 @@
 		CDD5340923DAF537009C4545 /* UserListSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5344D23DF0804009C4545 /* Services */,
+				CDD5343C23DEFB25009C4545 /* ViewModels */,
 				CDD5342F23DB1125009C4545 /* Extensions */,
-				CDD5342C23DB10A5009C4545 /* DataLayer */,
 				CDD5342523DB0F71009C4545 /* Model */,
 				CDD5341E23DB09BA009C4545 /* View */,
 				CDD5340A23DAF537009C4545 /* AppDelegate.swift */,
@@ -122,10 +133,9 @@
 		CDD5341E23DB09BA009C4545 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5343F23DF0166009C4545 /* Users */,
 				CDD5341F23DB09C6009C4545 /* AppView.swift */,
-				CDD5342123DB09F4009C4545 /* UsersView.swift */,
 				CDD5342323DB0A1A009C4545 /* SavedUsersView.swift */,
-				CDD5343A23DB1291009C4545 /* ItemRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,16 +146,9 @@
 				CDD5342623DB0F93009C4545 /* User.swift */,
 				CDD5342823DB103A009C4545 /* Name.swift */,
 				CDD5342A23DB1060009C4545 /* Picture.swift */,
+				CDD5345223DF0918009C4545 /* UsersResponse.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CDD5342C23DB10A5009C4545 /* DataLayer */ = {
-			isa = PBXGroup;
-			children = (
-				CDD5342D23DB10B6009C4545 /* RealmProvider.swift */,
-			);
-			path = DataLayer;
 			sourceTree = "<group>";
 		};
 		CDD5342F23DB1125009C4545 /* Extensions */ = {
@@ -157,6 +160,34 @@
 				CDD5343323DB1125009C4545 /* Array+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CDD5343C23DEFB25009C4545 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5343D23DEFB40009C4545 /* UsersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CDD5343F23DF0166009C4545 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5342123DB09F4009C4545 /* UsersView.swift */,
+				CDD5343A23DB1291009C4545 /* UserRow.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		CDD5344D23DF0804009C4545 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5342D23DB10B6009C4545 /* RealmProvider.swift */,
+				CDD5344E23DF0832009C4545 /* APIService.swift */,
+				CDD5345023DF0865009C4545 /* APIServiceError.swift */,
+				CDD5345423DF095E009C4545 /* UsersRequest.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E61FB3BD11D8F8643838DAB8 /* Frameworks */ = {
@@ -284,17 +315,22 @@
 			files = (
 				CDD5342B23DB1060009C4545 /* Picture.swift in Sources */,
 				CDD5342223DB09F4009C4545 /* UsersView.swift in Sources */,
+				CDD5344F23DF0832009C4545 /* APIService.swift in Sources */,
+				CDD5345323DF0918009C4545 /* UsersResponse.swift in Sources */,
 				CDD5342023DB09C6009C4545 /* AppView.swift in Sources */,
 				CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */,
 				CDD5343523DB1125009C4545 /* String+Extension.swift in Sources */,
 				CDD5342E23DB10B6009C4545 /* RealmProvider.swift in Sources */,
+				CDD5345523DF095E009C4545 /* UsersRequest.swift in Sources */,
 				CDD5340D23DAF537009C4545 /* SceneDelegate.swift in Sources */,
 				CDD5343423DB1125009C4545 /* NSObejct+ClassName.swift in Sources */,
 				CDD5340F23DAF537009C4545 /* ContentView.swift in Sources */,
 				CDD5342423DB0A1A009C4545 /* SavedUsersView.swift in Sources */,
 				CDD5343623DB1125009C4545 /* Path.swift in Sources */,
 				CDD5343723DB1125009C4545 /* Array+Extension.swift in Sources */,
-				CDD5343B23DB1291009C4545 /* ItemRow.swift in Sources */,
+				CDD5345123DF0865009C4545 /* APIServiceError.swift in Sources */,
+				CDD5343B23DB1291009C4545 /* UserRow.swift in Sources */,
+				CDD5343E23DEFB40009C4545 /* UsersViewModel.swift in Sources */,
 				CDD5342923DB103A009C4545 /* Name.swift in Sources */,
 				CDD5342723DB0F93009C4545 /* User.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-@objcMembers class Picture: Object, Codable {
+@objcMembers class Picture: Object, Codable, Identifiable {
     
     dynamic var large: String = ""
     dynamic var medium: String = ""

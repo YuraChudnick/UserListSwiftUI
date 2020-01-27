@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-@objcMembers class Name: Object, Codable {
+@objcMembers class Name: Object, Codable, Identifiable {
     
     dynamic var title: String = ""
     dynamic var first: String = ""

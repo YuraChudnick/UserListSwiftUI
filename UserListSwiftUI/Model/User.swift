@@ -20,7 +20,7 @@ enum UserDataError: Error {
     case noThumbnailURL
 }
 
-@objcMembers class User: Object, Codable {
+@objcMembers class User: Object, Codable, Identifiable {
     
     dynamic var gender: String = ""
     dynamic var name: Name? = nil

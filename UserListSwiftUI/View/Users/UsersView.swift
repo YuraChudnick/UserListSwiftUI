@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct UsersView: View {
+    @ObservedObject var viewModel: UsersViewModel
+    
     var body: some View {
         NavigationView {
-            Text("test")
+            List(viewModel.users) { user in
+                UserRow(user: user)
+            }
             .navigationBarTitle("Users")
         }
     }
@@ -19,6 +23,6 @@ struct UsersView: View {
 
 struct UsersView_Previews: PreviewProvider {
     static var previews: some View {
-        UsersView()
+        UsersView(viewModel: .init())
     }
 }
