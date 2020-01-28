@@ -16,10 +16,14 @@ struct UsersView: View {
             List(viewModel.users) { user in
                 UserRow(user: user)
             }
-            .navigationBarTitle("Users")
+            .pullToRefresh(isShowing: $viewModel.isRefreshing, onRefresh: {
+                print("StartRefreshing")
+                self.viewModel.apply(.onAppear)
+            })
+            //.navigationBarTitle("Users")
+            .navigationBarTitle(Text("Users"), displayMode: .inline)
         }
-        .edgesIgnoringSafeArea(.top)
-        .onAppear(perform: { self.viewModel.apply(.onAppear)} )
+        .onAppear(perform: { self.viewModel.apply(.onAppear) })
     }
 }
 

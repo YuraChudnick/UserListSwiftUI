@@ -22,7 +22,8 @@ final class UsersViewModel: ObservableObject {
     
     func apply(_ input: Input) {
         switch input {
-        case .onAppear: onAppearSubject.send(())
+        case .onAppear:
+            onAppearSubject.send(())
         }
     }
     
@@ -33,6 +34,7 @@ final class UsersViewModel: ObservableObject {
     @Published private(set) var users: [User] = []
     @Published var isErrorShown = false
     @Published var errorMessage = ""
+    @Published var isRefreshing = false
     private var page = 0
     
     private let responseSubject = PassthroughSubject<UsersResponse, Never>()
@@ -52,6 +54,7 @@ final class UsersViewModel: ObservableObject {
             .flatMap { [apiService] _ in
                 apiService.response(from: UsersRequest.pagination(page: self.page, quantity: 20))
                     .catch { [weak self] error -> Empty<UsersResponse, Never> in
+                        self?.isRefreshing = false
                         self?.errorSubject.send(error)
                         return .init()
                 }
@@ -71,6 +74,7 @@ final class UsersViewModel: ObservableObject {
             .map { $0.results }
             .sink(receiveValue: { [weak self] (newUsers) in
                 guard let `self` = self else { return }
+                self.isRefreshing = false
                 self.page += 1
                 self.users += newUsers
             })

@@ -22,6 +22,7 @@ struct AppView: View {
                     Text("Saved")
             }
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

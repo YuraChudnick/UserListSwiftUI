@@ -1,4 +1,5 @@
 PODS:
+  - Introspect (0.0.6)
   - Kingfisher/Core (5.11.0)
   - Kingfisher/SwiftUI (5.11.0):
     - Kingfisher/Core
@@ -9,20 +10,23 @@ PODS:
     - Realm (= 4.1.1)
 
 DEPENDENCIES:
+  - Introspect
   - Kingfisher/SwiftUI
   - RealmSwift
 
 SPEC REPOS:
   trunk:
+    - Introspect
     - Kingfisher
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  Introspect: 3575a13dbece038e564e4375eeac2117e64a0242
   Kingfisher: 4569606189149e19c7d9439f47e885d0679b7a90
   Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
   RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
 
-PODFILE CHECKSUM: b1ff29d846cc6eb7ec2645f3a7bd3895a1c57485
+PODFILE CHECKSUM: edd7b70bc2fda21f68fe1df484b19db8d25f230c
 
 COCOAPODS: 1.8.3

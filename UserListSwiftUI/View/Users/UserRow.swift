@@ -29,7 +29,6 @@ struct UserRow: View {
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
                 }
-                
                 Spacer()
             }
         }
