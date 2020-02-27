@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		99CC19B688C37913167138E6 /* Pods_UserListSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCF593D6B67916FAB31F6CB /* Pods_UserListSwiftUI.framework */; };
-		CD556B6C23E02D64005DCF79 /* PullToRefresh .swift in Sources */ = {isa = PBXBuildFile; fileRef = CD556B6B23E02D64005DCF79 /* PullToRefresh .swift */; };
+		CD556B6C23E02D64005DCF79 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD556B6B23E02D64005DCF79 /* PullToRefresh.swift */; };
 		CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64B2408201E009FED31 /* UrlImageView.swift */; };
 		CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64D24082079009FED31 /* UrlImageModel.swift */; };
 		CDABF65024082164009FED31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* ImageCache.swift */; };
 		CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340A23DAF537009C4545 /* AppDelegate.swift */; };
 		CDD5340D23DAF537009C4545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340C23DAF537009C4545 /* SceneDelegate.swift */; };
-		CDD5340F23DAF537009C4545 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340E23DAF537009C4545 /* ContentView.swift */; };
 		CDD5341123DAF53A009C4545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD5341023DAF53A009C4545 /* Assets.xcassets */; };
 		CDD5341423DAF53A009C4545 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD5341323DAF53A009C4545 /* Preview Assets.xcassets */; };
 		CDD5341723DAF53A009C4545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD5341523DAF53A009C4545 /* LaunchScreen.storyboard */; };
@@ -43,14 +42,13 @@
 		5CCF593D6B67916FAB31F6CB /* Pods_UserListSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserListSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		632CAC2B6F4B276AC5AB9239 /* Pods-UserListSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		BBD5B19186D3750A011FE1BC /* Pods-UserListSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
-		CD556B6B23E02D64005DCF79 /* PullToRefresh .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PullToRefresh .swift"; sourceTree = "<group>"; };
+		CD556B6B23E02D64005DCF79 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		CDABF64B2408201E009FED31 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		CDABF64D24082079009FED31 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 		CDABF64F24082164009FED31 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		CDD5340723DAF537009C4545 /* UserListSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5340A23DAF537009C4545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD5340C23DAF537009C4545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDD5340E23DAF537009C4545 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDD5341023DAF53A009C4545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD5341323DAF53A009C4545 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDD5341623DAF53A009C4545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +105,89 @@
 			path = ImageCacher;
 			sourceTree = "<group>";
 		};
+		CDABF651240825BD009FED31 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5344E23DF0832009C4545 /* APIService.swift */,
+				CDD5345023DF0865009C4545 /* APIServiceError.swift */,
+				CDD5345423DF095E009C4545 /* UsersRequest.swift */,
+				CDD5345623DF0FAE009C4545 /* RequestType.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CDABF653240825D9009FED31 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5342D23DB10B6009C4545 /* RealmProvider.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		CDABF654240825EB009FED31 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CDABF65924082770009FED31 /* DetailUser */,
+				CDABF65824082767009FED31 /* SavedUsers */,
+				CDABF65724082714009FED31 /* Users */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CDABF6552408264C009FED31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5341023DAF53A009C4545 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDABF6562408265B009FED31 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5341F23DB09C6009C4545 /* AppView.swift */,
+				CDD5340A23DAF537009C4545 /* AppDelegate.swift */,
+				CDD5340C23DAF537009C4545 /* SceneDelegate.swift */,
+				CDD5341523DAF53A009C4545 /* LaunchScreen.storyboard */,
+				CDD5341823DAF53A009C4545 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CDABF65724082714009FED31 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5343D23DEFB40009C4545 /* UsersViewModel.swift */,
+				CDD5342123DB09F4009C4545 /* UsersView.swift */,
+				CDD5343A23DB1291009C4545 /* UserRow.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		CDABF65824082767009FED31 /* SavedUsers */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5342323DB0A1A009C4545 /* SavedUsersView.swift */,
+			);
+			path = SavedUsers;
+			sourceTree = "<group>";
+		};
+		CDABF65924082770009FED31 /* DetailUser */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5345823DF373A009C4545 /* UserDetailView.swift */,
+			);
+			path = DetailUser;
+			sourceTree = "<group>";
+		};
+		CDABF65B240827AA009FED31 /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				CD556B6B23E02D64005DCF79 /* PullToRefresh.swift */,
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
 		CDD533FE23DAF537009C4545 = {
 			isa = PBXGroup;
 			children = (
@@ -128,18 +209,14 @@
 		CDD5340923DAF537009C4545 /* UserListSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CDD5344D23DF0804009C4545 /* Services */,
-				CDD5343C23DEFB25009C4545 /* ViewModels */,
+				CDABF6562408265B009FED31 /* Application */,
 				CDD5342F23DB1125009C4545 /* Extensions */,
-				CDD5342523DB0F71009C4545 /* Model */,
-				CDD5341E23DB09BA009C4545 /* View */,
-				CDD5340A23DAF537009C4545 /* AppDelegate.swift */,
-				CDD5340C23DAF537009C4545 /* SceneDelegate.swift */,
-				CDD5340E23DAF537009C4545 /* ContentView.swift */,
-				CDD5341023DAF53A009C4545 /* Assets.xcassets */,
-				CDD5341523DAF53A009C4545 /* LaunchScreen.storyboard */,
-				CDD5341823DAF53A009C4545 /* Info.plist */,
+				CDD5342523DB0F71009C4545 /* Models */,
+				CDABF654240825EB009FED31 /* Modules */,
 				CDD5341223DAF53A009C4545 /* Preview Content */,
+				CDABF6552408264C009FED31 /* Resources */,
+				CDD5344D23DF0804009C4545 /* Services */,
+				CDABF65B240827AA009FED31 /* UILayer */,
 			);
 			path = UserListSwiftUI;
 			sourceTree = "<group>";
@@ -152,19 +229,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CDD5341E23DB09BA009C4545 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CDD5343F23DF0166009C4545 /* Users */,
-				CDD5341F23DB09C6009C4545 /* AppView.swift */,
-				CDD5342323DB0A1A009C4545 /* SavedUsersView.swift */,
-				CDD5345823DF373A009C4545 /* UserDetailView.swift */,
-				CD556B6B23E02D64005DCF79 /* PullToRefresh .swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CDD5342523DB0F71009C4545 /* Model */ = {
+		CDD5342523DB0F71009C4545 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CDD5342623DB0F93009C4545 /* User.swift */,
@@ -172,7 +237,7 @@
 				CDD5342A23DB1060009C4545 /* Picture.swift */,
 				CDD5345223DF0918009C4545 /* UsersResponse.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CDD5342F23DB1125009C4545 /* Extensions */ = {
@@ -186,32 +251,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CDD5343C23DEFB25009C4545 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CDD5343D23DEFB40009C4545 /* UsersViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		CDD5343F23DF0166009C4545 /* Users */ = {
-			isa = PBXGroup;
-			children = (
-				CDD5342123DB09F4009C4545 /* UsersView.swift */,
-				CDD5343A23DB1291009C4545 /* UserRow.swift */,
-			);
-			path = Users;
-			sourceTree = "<group>";
-		};
 		CDD5344D23DF0804009C4545 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CDABF653240825D9009FED31 /* Realm */,
+				CDABF651240825BD009FED31 /* API */,
 				CDABF64A24081FFE009FED31 /* ImageCacher */,
-				CDD5342D23DB10B6009C4545 /* RealmProvider.swift */,
-				CDD5344E23DF0832009C4545 /* APIService.swift */,
-				CDD5345023DF0865009C4545 /* APIServiceError.swift */,
-				CDD5345423DF095E009C4545 /* UsersRequest.swift */,
-				CDD5345623DF0FAE009C4545 /* RequestType.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -342,7 +387,7 @@
 				CDD5342B23DB1060009C4545 /* Picture.swift in Sources */,
 				CDD5342223DB09F4009C4545 /* UsersView.swift in Sources */,
 				CDD5345723DF0FAE009C4545 /* RequestType.swift in Sources */,
-				CD556B6C23E02D64005DCF79 /* PullToRefresh .swift in Sources */,
+				CD556B6C23E02D64005DCF79 /* PullToRefresh.swift in Sources */,
 				CDD5344F23DF0832009C4545 /* APIService.swift in Sources */,
 				CDD5345323DF0918009C4545 /* UsersResponse.swift in Sources */,
 				CDD5342023DB09C6009C4545 /* AppView.swift in Sources */,
@@ -356,7 +401,6 @@
 				CDABF65024082164009FED31 /* ImageCache.swift in Sources */,
 				CDD5343423DB1125009C4545 /* NSObejct+ClassName.swift in Sources */,
 				CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */,
-				CDD5340F23DAF537009C4545 /* ContentView.swift in Sources */,
 				CDD5342423DB0A1A009C4545 /* SavedUsersView.swift in Sources */,
 				CDD5343623DB1125009C4545 /* Path.swift in Sources */,
 				CDD5343723DB1125009C4545 /* Array+Extension.swift in Sources */,
@@ -505,7 +549,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UserListSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 789NVTRQ75;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UserListSwiftUI/Info.plist;
+				INFOPLIST_FILE = UserListSwiftUI/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +570,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UserListSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 789NVTRQ75;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UserListSwiftUI/Info.plist;
+				INFOPLIST_FILE = UserListSwiftUI/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
