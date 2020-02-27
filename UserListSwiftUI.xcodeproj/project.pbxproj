@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		99CC19B688C37913167138E6 /* Pods_UserListSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCF593D6B67916FAB31F6CB /* Pods_UserListSwiftUI.framework */; };
 		CD556B6C23E02D64005DCF79 /* PullToRefresh .swift in Sources */ = {isa = PBXBuildFile; fileRef = CD556B6B23E02D64005DCF79 /* PullToRefresh .swift */; };
+		CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64B2408201E009FED31 /* UrlImageView.swift */; };
+		CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64D24082079009FED31 /* UrlImageModel.swift */; };
+		CDABF65024082164009FED31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* ImageCache.swift */; };
 		CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340A23DAF537009C4545 /* AppDelegate.swift */; };
 		CDD5340D23DAF537009C4545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340C23DAF537009C4545 /* SceneDelegate.swift */; };
 		CDD5340F23DAF537009C4545 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340E23DAF537009C4545 /* ContentView.swift */; };
@@ -41,6 +44,9 @@
 		632CAC2B6F4B276AC5AB9239 /* Pods-UserListSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		BBD5B19186D3750A011FE1BC /* Pods-UserListSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		CD556B6B23E02D64005DCF79 /* PullToRefresh .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PullToRefresh .swift"; sourceTree = "<group>"; };
+		CDABF64B2408201E009FED31 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
+		CDABF64D24082079009FED31 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
+		CDABF64F24082164009FED31 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		CDD5340723DAF537009C4545 /* UserListSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5340A23DAF537009C4545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD5340C23DAF537009C4545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,16 @@
 				632CAC2B6F4B276AC5AB9239 /* Pods-UserListSwiftUI.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CDABF64A24081FFE009FED31 /* ImageCacher */ = {
+			isa = PBXGroup;
+			children = (
+				CDABF64B2408201E009FED31 /* UrlImageView.swift */,
+				CDABF64D24082079009FED31 /* UrlImageModel.swift */,
+				CDABF64F24082164009FED31 /* ImageCache.swift */,
+			);
+			path = ImageCacher;
 			sourceTree = "<group>";
 		};
 		CDD533FE23DAF537009C4545 = {
@@ -190,6 +206,7 @@
 		CDD5344D23DF0804009C4545 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CDABF64A24081FFE009FED31 /* ImageCacher */,
 				CDD5342D23DB10B6009C4545 /* RealmProvider.swift */,
 				CDD5344E23DF0832009C4545 /* APIService.swift */,
 				CDD5345023DF0865009C4545 /* APIServiceError.swift */,
@@ -330,12 +347,15 @@
 				CDD5345323DF0918009C4545 /* UsersResponse.swift in Sources */,
 				CDD5342023DB09C6009C4545 /* AppView.swift in Sources */,
 				CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */,
+				CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */,
 				CDD5343523DB1125009C4545 /* String+Extension.swift in Sources */,
 				CDD5342E23DB10B6009C4545 /* RealmProvider.swift in Sources */,
 				CDD5345523DF095E009C4545 /* UsersRequest.swift in Sources */,
 				CDD5345923DF373A009C4545 /* UserDetailView.swift in Sources */,
 				CDD5340D23DAF537009C4545 /* SceneDelegate.swift in Sources */,
+				CDABF65024082164009FED31 /* ImageCache.swift in Sources */,
 				CDD5343423DB1125009C4545 /* NSObejct+ClassName.swift in Sources */,
+				CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */,
 				CDD5340F23DAF537009C4545 /* ContentView.swift in Sources */,
 				CDD5342423DB0A1A009C4545 /* SavedUsersView.swift in Sources */,
 				CDD5343623DB1125009C4545 /* Path.swift in Sources */,

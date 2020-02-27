@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import struct Kingfisher.KFImage
 
 struct UserRow: View {
     
@@ -16,12 +15,7 @@ struct UserRow: View {
     var body: some View {
         NavigationLink(destination: UserDetailView()) {
             HStack() {
-                KFImage(user.getAvatarUrl(.medium))
-                //Image(systemName: "person")
-                    .resizable()
-                    .foregroundColor(Color.gray)
-                    .frame(width: 40.0, height: 40.0)
-                    .clipShape(Circle())
+                UrlImageView(urlString: user.picture?.medium)
                 VStack(alignment: .leading) {
                     Text(user.name?.formattedName ?? "unknown")
                         .font(.headline)
