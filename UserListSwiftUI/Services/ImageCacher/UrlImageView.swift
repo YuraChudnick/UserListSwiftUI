@@ -11,8 +11,10 @@ import Combine
 
 struct UrlImageView: View {
     @ObservedObject var urlImageModel: UrlImageModel
+    let imageSize: CGSize
     
-    init(urlString: String?) {
+    init(imageSize: CGSize = CGSize(width: 40, height: 40), urlString: String?) {
+        self.imageSize = imageSize
         urlImageModel = UrlImageModel(urlString: urlString)
     }
     
@@ -21,7 +23,7 @@ struct UrlImageView: View {
             .resizable()
             .scaledToFit()
             .foregroundColor(Color.gray)
-            .frame(width: 40.0, height: 40.0)
+            .frame(width: imageSize.width, height: imageSize.height)
             .clipShape(Circle())
     }
     

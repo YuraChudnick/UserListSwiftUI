@@ -36,6 +36,8 @@
 		CDD5345523DF095E009C4545 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345423DF095E009C4545 /* UsersRequest.swift */; };
 		CDD5345723DF0FAE009C4545 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345623DF0FAE009C4545 /* RequestType.swift */; };
 		CDD5345923DF373A009C4545 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345823DF373A009C4545 /* UserDetailView.swift */; };
+		DE063296240C36E9004AAACE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE063295240C36E9004AAACE /* AvatarView.swift */; };
+		DE063298240C39C6004AAACE /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE063297240C39C6004AAACE /* UserDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		CDD5345423DF095E009C4545 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
 		CDD5345623DF0FAE009C4545 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		CDD5345823DF373A009C4545 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		DE063295240C36E9004AAACE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		DE063297240C39C6004AAACE /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				CDD5345823DF373A009C4545 /* UserDetailView.swift */,
+				DE063295240C36E9004AAACE /* AvatarView.swift */,
+				DE063297240C39C6004AAACE /* UserDetailViewModel.swift */,
 			);
 			path = DetailUser;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				CDD5342023DB09C6009C4545 /* AppView.swift in Sources */,
 				CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */,
 				CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */,
+				DE063298240C39C6004AAACE /* UserDetailViewModel.swift in Sources */,
 				CDD5343523DB1125009C4545 /* String+Extension.swift in Sources */,
 				CDD5342E23DB10B6009C4545 /* RealmProvider.swift in Sources */,
 				CDD5345523DF095E009C4545 /* UsersRequest.swift in Sources */,
@@ -401,6 +408,7 @@
 				CDABF65024082164009FED31 /* ImageCache.swift in Sources */,
 				CDD5343423DB1125009C4545 /* NSObejct+ClassName.swift in Sources */,
 				CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */,
+				DE063296240C36E9004AAACE /* AvatarView.swift in Sources */,
 				CDD5342423DB0A1A009C4545 /* SavedUsersView.swift in Sources */,
 				CDD5343623DB1125009C4545 /* Path.swift in Sources */,
 				CDD5343723DB1125009C4545 /* Array+Extension.swift in Sources */,

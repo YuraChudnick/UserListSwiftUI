@@ -23,6 +23,9 @@ import RealmSwift
     #if DEBUG
     static let example: Picture = {
         let picture = Picture()
+        picture.large = "https://randomuser.me/api/portraits/women/88.jpg"
+        picture.medium = "https://randomuser.me/api/portraits/women/88.jpg"
+        picture.thumbnail = "https://randomuser.me/api/portraits/women/88.jpg"
         return picture
     }()
     #endif

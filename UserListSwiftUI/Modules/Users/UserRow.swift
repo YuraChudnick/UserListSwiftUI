@@ -13,7 +13,7 @@ struct UserRow: View {
     @State var user: User
     
     var body: some View {
-        NavigationLink(destination: UserDetailView()) {
+        NavigationLink(destination: UserDetailView(viewModel: UserDetailViewModel(user: user))) {
             HStack() {
                 UrlImageView(urlString: user.picture?.medium)
                 VStack(alignment: .leading) {

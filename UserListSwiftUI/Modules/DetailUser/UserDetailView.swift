@@ -9,13 +9,25 @@
 import SwiftUI
 
 struct UserDetailView: View {
+    
+    @ObservedObject var viewModel: UserDetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            AvatarView(imageLink: viewModel.avatarImage)
+                .frame(height: 202, alignment: .center)
+        }
+        .navigationBarTitle("Edit profile")
+        .navigationBarItems(trailing:
+            Button("Save") {
+                self.viewModel.apply(.onSave)
+            }
+        )
     }
 }
 
 struct UserDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDetailView()
+        UserDetailView(viewModel: UserDetailViewModel(user: User.example))
     }
 }
