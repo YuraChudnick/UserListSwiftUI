@@ -6,8 +6,6 @@
 //  Copyright © 2020 Yurii Chudnovets. All rights reserved.
 //
 
-import Foundation
-import SwiftUI
 import Combine
 import ListPagination
 

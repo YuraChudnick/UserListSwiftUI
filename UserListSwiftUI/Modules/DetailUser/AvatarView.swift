@@ -10,13 +10,13 @@ import SwiftUI
 
 struct AvatarView: View {
     
-    @State var imageLink: String?
+    @State var viewModel: AvatarViewModel
     
     var body: some View {
         HStack {
             Spacer()
             VStack(alignment: .center) {
-                UrlImageView(imageSize: CGSize(width: 85, height: 85), urlString: imageLink)
+                UrlImageView(imageSize: CGSize(width: 85, height: 85), urlString: viewModel.image)
                 Button("Change avatar") {
                     print("pressed")
                 }
@@ -32,6 +32,6 @@ struct AvatarView: View {
 
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarView(imageLink: "https://randomuser.me/api/portraits/women/88.jpg")
+        AvatarView(viewModel: AvatarViewModel(image: "https://randomuser.me/api/portraits/women/88.jpg"))
     }
 }

@@ -16,7 +16,7 @@ struct AppView: View {
                     Image(systemName: "person.2.fill")
                     Text("Users")
             }
-            SavedUsersView()
+            SavedUsersView(viewModel: .init())
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Saved")

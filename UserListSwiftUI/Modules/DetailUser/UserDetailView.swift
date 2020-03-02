@@ -15,7 +15,7 @@ struct UserDetailView: View {
     var body: some View {
         List {
             Section {
-                AvatarView(imageLink: viewModel.avatarImage)
+                AvatarView(viewModel: viewModel.avatarViewModel)
                     .buttonStyle(PlainButtonStyle())
                     .frame(height: 202)
             }

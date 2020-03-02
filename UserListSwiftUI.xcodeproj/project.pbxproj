@@ -13,6 +13,8 @@
 		CD73E1D9240D3636002D597B /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1D8240D3636002D597B /* ParameterView.swift */; };
 		CD73E1DB240D36AA002D597B /* ParameterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */; };
 		CD73E1DD240D37B5002D597B /* ParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DC240D37B5002D597B /* ParameterType.swift */; };
+		CD73E1E5240D5AD1002D597B /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1E4240D5AD1002D597B /* AvatarViewModel.swift */; };
+		CD73E1E7240D5CFD002D597B /* SavedUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */; };
 		CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64B2408201E009FED31 /* UrlImageView.swift */; };
 		CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64D24082079009FED31 /* UrlImageModel.swift */; };
 		CDABF65024082164009FED31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* ImageCache.swift */; };
@@ -52,6 +54,8 @@
 		CD73E1D8240D3636002D597B /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewModel.swift; sourceTree = "<group>"; };
 		CD73E1DC240D37B5002D597B /* ParameterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterType.swift; sourceTree = "<group>"; };
+		CD73E1E4240D5AD1002D597B /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
+		CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUsersViewModel.swift; sourceTree = "<group>"; };
 		CDABF64B2408201E009FED31 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		CDABF64D24082079009FED31 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 		CDABF64F24082164009FED31 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD5342323DB0A1A009C4545 /* SavedUsersView.swift */,
+				CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */,
 			);
 			path = SavedUsers;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				CD73E1D8240D3636002D597B /* ParameterView.swift */,
 				CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */,
 				CD73E1DC240D37B5002D597B /* ParameterType.swift */,
+				CD73E1E4240D5AD1002D597B /* AvatarViewModel.swift */,
 			);
 			path = DetailUser;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				CDD5345723DF0FAE009C4545 /* RequestType.swift in Sources */,
 				CD556B6C23E02D64005DCF79 /* PullToRefresh.swift in Sources */,
 				CD73E1DB240D36AA002D597B /* ParameterViewModel.swift in Sources */,
+				CD73E1E7240D5CFD002D597B /* SavedUsersViewModel.swift in Sources */,
 				CDD5344F23DF0832009C4545 /* APIService.swift in Sources */,
 				CDD5345323DF0918009C4545 /* UsersResponse.swift in Sources */,
 				CD73E1D9240D3636002D597B /* ParameterView.swift in Sources */,
@@ -433,6 +440,7 @@
 				CDD5343623DB1125009C4545 /* Path.swift in Sources */,
 				CDD5343723DB1125009C4545 /* Array+Extension.swift in Sources */,
 				CDD5345123DF0865009C4545 /* APIServiceError.swift in Sources */,
+				CD73E1E5240D5AD1002D597B /* AvatarViewModel.swift in Sources */,
 				CDD5343B23DB1291009C4545 /* UserRow.swift in Sources */,
 				CDD5343E23DEFB40009C4545 /* UsersViewModel.swift in Sources */,
 				CDD5342923DB103A009C4545 /* Name.swift in Sources */,

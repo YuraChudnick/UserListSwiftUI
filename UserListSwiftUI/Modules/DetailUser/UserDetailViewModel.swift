@@ -15,6 +15,7 @@ final class UserDetailViewModel: ObservableObject {
     private let user: User
     private let realmProvider: RealmProvider
     
+    let avatarViewModel: AvatarViewModel
     @Published var paramaterViewModels: [ParameterViewModel] = []
     
     // MARK: - Input
@@ -26,21 +27,31 @@ final class UserDetailViewModel: ObservableObject {
     func apply(_ input: Input) {
         switch input {
         case .onSave:
-            break
+            save()
         }
-    }
-    
-    var avatarImage: String? {
-        return user.picture?.large
     }
     
     init(user: User, realmProvider: RealmProvider = .users) {
         self.user = user
         self.realmProvider = realmProvider
+        avatarViewModel = AvatarViewModel(image: user.picture?.large)
         paramaterViewModels = [ParameterViewModel(type: .firstName, value: user.name?.first ?? ""),
                                ParameterViewModel(type: .lastName, value: user.name?.last ?? ""),
                                ParameterViewModel(type: .email, value: user.email),
                                ParameterViewModel(type: .phoneNumber, value: user.phone)]
+    }
+    
+    private func save() {
+        if user.realm != nil {
+            user.update(in: realmProvider,
+            with: (first: paramaterViewModels[0].value,
+                   last: paramaterViewModels[1].value,
+                   email: paramaterViewModels[2].value,
+                   phone: paramaterViewModels[3].value,
+                   image: avatarViewModel.image ?? user.picture?.large ?? ""))
+        } else {
+            user.save()
+        }
     }
     
 }

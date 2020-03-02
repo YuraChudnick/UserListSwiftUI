@@ -9,13 +9,27 @@
 import SwiftUI
 
 struct SavedUsersView: View {
+    
+    @ObservedObject var viewModel: SavedUsersViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+//            ForEach(viewModel.savedUsers, id: \.self) { user in
+//                UserRow(user: user)
+//            }.onDelete(perform: { index in
+//                print(index)
+//            })
+            List(viewModel.savedUsers) { user in
+                UserRow(user: user)
+            }
+            .navigationBarTitle(Text("Saved users"), displayMode: .inline)
+        }
+        .onAppear(perform: { self.viewModel.apply(.onAppear) })
     }
 }
 
 struct SavedUsersView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedUsersView()
+        SavedUsersView(viewModel: SavedUsersViewModel())
     }
 }
