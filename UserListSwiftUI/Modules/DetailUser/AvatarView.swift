@@ -14,7 +14,17 @@ struct AvatarView: View {
     
     var body: some View {
         HStack {
-            UrlImageView(imageSize: CGSize(width: 85, height: 85), urlString: imageLink)
+            Spacer()
+            VStack(alignment: .center) {
+                UrlImageView(imageSize: CGSize(width: 85, height: 85), urlString: imageLink)
+                Button("Change avatar") {
+                    print("pressed")
+                }
+                .font(.subheadline)
+                .foregroundColor(Color.blue)
+                
+            }
+            Spacer()
         }
     }
     

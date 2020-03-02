@@ -14,13 +14,21 @@ struct UsersView: View {
     var body: some View {
         NavigationView {
             List(viewModel.users) { user in
-                UserRow(user: user)
+                VStack(alignment: .center) {
+                    UserRow(user: user)
+                    if self.viewModel.isRefreshing && self.viewModel.users.isLastItem(user) {
+                        Divider()
+                        Text("Loading ...")
+                            .padding(.vertical)
+                    }
+                }.onAppear {
+                    self.viewModel.listItemAppears(user)
+                }
             }
             .pullToRefresh(isShowing: $viewModel.isRefreshing, onRefresh: {
                 print("StartRefreshing")
-                self.viewModel.apply(.onAppear)
+                self.viewModel.apply(.onLoadData)
             })
-            //.navigationBarTitle("Users")
             .navigationBarTitle(Text("Users"), displayMode: .inline)
         }
         .onAppear(perform: { self.viewModel.apply(.onAppear) })

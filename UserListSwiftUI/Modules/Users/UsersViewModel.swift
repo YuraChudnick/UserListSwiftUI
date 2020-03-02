@@ -9,20 +9,35 @@
 import Foundation
 import SwiftUI
 import Combine
+import ListPagination
 
 final class UsersViewModel: ObservableObject {
     
     private var cancellables: [AnyCancellable] = []
+    private var isViewDidLoad: Bool = false
     
     // MARK: - Input
     
     enum Input {
         case onAppear
+        case onLoadData
     }
     
     func apply(_ input: Input) {
         switch input {
         case .onAppear:
+            if !isViewDidLoad {
+                isViewDidLoad = true
+                onAppearSubject.send(())
+            }
+        case .onLoadData:
+            onAppearSubject.send(())
+        }
+    }
+    
+    func listItemAppears<Item: Identifiable>(_ item: Item) {
+        if users.isLastItem(item) {
+            isRefreshing = true
             onAppearSubject.send(())
         }
     }

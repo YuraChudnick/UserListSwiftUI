@@ -15,6 +15,8 @@ final class UserDetailViewModel: ObservableObject {
     private let user: User
     private let realmProvider: RealmProvider
     
+    @Published var paramaterViewModels: [ParameterViewModel] = []
+    
     // MARK: - Input
     
     enum Input {
@@ -35,6 +37,10 @@ final class UserDetailViewModel: ObservableObject {
     init(user: User, realmProvider: RealmProvider = .users) {
         self.user = user
         self.realmProvider = realmProvider
+        paramaterViewModels = [ParameterViewModel(type: .firstName, value: user.name?.first ?? ""),
+                               ParameterViewModel(type: .lastName, value: user.name?.last ?? ""),
+                               ParameterViewModel(type: .email, value: user.email),
+                               ParameterViewModel(type: .phoneNumber, value: user.phone)]
     }
     
 }

@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+ 
 struct UserRow: View {
     
     @State var user: User

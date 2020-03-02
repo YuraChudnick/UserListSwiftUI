@@ -14,9 +14,20 @@ struct UserDetailView: View {
     
     var body: some View {
         List {
-            AvatarView(imageLink: viewModel.avatarImage)
-                .frame(height: 202, alignment: .center)
+            Section {
+                AvatarView(imageLink: viewModel.avatarImage)
+                    .buttonStyle(PlainButtonStyle())
+                    .frame(height: 202)
+            }
+            Section {
+                ParameterView(viewModel: viewModel.paramaterViewModels[0])
+                ParameterView(viewModel: viewModel.paramaterViewModels[1])
+                ParameterView(viewModel: viewModel.paramaterViewModels[2])
+                ParameterView(viewModel: viewModel.paramaterViewModels[3])
+            }
         }
+        .gesture(DragGesture().onChanged {_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
+        .listStyle(GroupedListStyle())
         .navigationBarTitle("Edit profile")
         .navigationBarItems(trailing:
             Button("Save") {
