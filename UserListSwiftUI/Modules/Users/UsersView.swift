@@ -12,25 +12,22 @@ struct UsersView: View {
     @ObservedObject var viewModel: UsersViewModel
     
     var body: some View {
-        NavigationView {
-            List(viewModel.users) { user in
-                VStack(alignment: .center) {
-                    UserRow(user: user)
-                    if self.viewModel.isRefreshing && self.viewModel.users.isLastItem(user) {
-                        Divider()
-                        Text("Loading ...")
-                            .padding(.vertical)
-                    }
-                }.onAppear {
-                    self.viewModel.listItemAppears(user)
+        List(viewModel.users) { user in
+            VStack(alignment: .center) {
+                UserRow(user: user)
+                if self.viewModel.isRefreshing && self.viewModel.users.isLastItem(user) {
+                    Divider()
+                    Text("Loading ...")
+                        .padding(.vertical)
                 }
+            }.onAppear {
+                self.viewModel.listItemAppears(user)
             }
-            .pullToRefresh(isShowing: $viewModel.isRefreshing, onRefresh: {
-                print("StartRefreshing")
-                self.viewModel.apply(.onLoadData)
-            })
-            .navigationBarTitle(Text("Users"), displayMode: .inline)
         }
+        .pullToRefresh(isShowing: $viewModel.isRefreshing, onRefresh: {
+            print("StartRefreshing")
+            self.viewModel.apply(.onLoadData)
+        })
         .onAppear(perform: { self.viewModel.apply(.onAppear) })
     }
 }

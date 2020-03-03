@@ -9,21 +9,27 @@
 import SwiftUI
 
 struct AppView: View {
+    
+    @State private var selection = 0
+    
     var body: some View {
-        TabView {
-            UsersView(viewModel: .init())
-                .tabItem {
-                    Image(systemName: "person.2.fill")
-                    Text("Users")
+        NavigationView {
+            TabView(selection: $selection) {
+                UsersView(viewModel: .init())
+                    .tabItem {
+                        Image(systemName: "person.2.fill")
+                        Text("Users")
+                }.tag(0)
+                SavedUsersView(viewModel: .init())
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Saved")
+                }.tag(1)
             }
-            SavedUsersView(viewModel: .init())
-                .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Saved")
-            }
+            .navigationBarTitle(Text(selection == 0 ? "Users" : "Saved users"), displayMode: .inline)
         }
-        .edgesIgnoringSafeArea(.top)
     }
+    
 }
 
 struct AppView_Previews: PreviewProvider {

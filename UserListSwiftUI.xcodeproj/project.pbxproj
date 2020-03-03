@@ -48,6 +48,7 @@
 		CDD5345923DF373A009C4545 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5345823DF373A009C4545 /* UserDetailView.swift */; };
 		DE063296240C36E9004AAACE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE063295240C36E9004AAACE /* AvatarView.swift */; };
 		DE063298240C39C6004AAACE /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE063297240C39C6004AAACE /* UserDetailViewModel.swift */; };
+		DE98E8FB240ED71A00251E3E /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98E8FA240ED71A00251E3E /* UINavigationController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		CDD5345823DF373A009C4545 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		DE063295240C36E9004AAACE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		DE063297240C39C6004AAACE /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		DE98E8FA240ED71A00251E3E /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				CDD5343123DB1125009C4545 /* String+Extension.swift */,
 				CDD5343223DB1125009C4545 /* Path.swift */,
 				CDD5343323DB1125009C4545 /* Array+Extension.swift */,
+				DE98E8FA240ED71A00251E3E /* UINavigationController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				CD73E1E5240D5AD1002D597B /* AvatarViewModel.swift in Sources */,
 				CDD5343B23DB1291009C4545 /* UserRow.swift in Sources */,
 				CDD5343E23DEFB40009C4545 /* UsersViewModel.swift in Sources */,
+				DE98E8FB240ED71A00251E3E /* UINavigationController+Extension.swift in Sources */,
 				CDD5342923DB103A009C4545 /* Name.swift in Sources */,
 				CDD5342723DB0F93009C4545 /* User.swift in Sources */,
 			);
