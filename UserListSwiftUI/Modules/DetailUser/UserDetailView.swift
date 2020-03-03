@@ -11,12 +11,13 @@ import SwiftUI
 struct UserDetailView: View {
     
     @ObservedObject var viewModel: UserDetailViewModel
+    @State private var inputImage: UIImage?
+    @State private var showingImagePicker = false
     
     var body: some View {
         List {
             Section {
                 AvatarView(viewModel: viewModel.avatarViewModel)
-                    .buttonStyle(PlainButtonStyle())
                     .frame(height: 202)
             }
             Section {
@@ -26,15 +27,23 @@ struct UserDetailView: View {
                 ParameterView(viewModel: viewModel.paramaterViewModels[3])
             }
         }
+        .buttonStyle(PlainButtonStyle())
         .gesture(DragGesture().onChanged {_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
         .listStyle(GroupedListStyle())
         .navigationBarTitle("Edit profile")
+        //.sheet(isPresented: <#T##Binding<Bool>#>, content: loadImage)
         .navigationBarItems(trailing:
             Button("Save") {
                 self.viewModel.apply(.onSave)
             }
         )
     }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        //image = Image(uiImage: inputImage)
+    }
+    
 }
 
 struct UserDetailView_Previews: PreviewProvider {

@@ -11,6 +11,7 @@ import SwiftUI
 struct AvatarView: View {
     
     @State var viewModel: AvatarViewModel
+    @State private var showingImagePicker = false
     
     var body: some View {
         HStack {
@@ -19,10 +20,10 @@ struct AvatarView: View {
                 UrlImageView(imageSize: CGSize(width: 85, height: 85), urlString: viewModel.image)
                 Button("Change avatar") {
                     print("pressed")
+                    self.showingImagePicker = true
                 }
                 .font(.subheadline)
                 .foregroundColor(Color.blue)
-                
             }
             Spacer()
         }

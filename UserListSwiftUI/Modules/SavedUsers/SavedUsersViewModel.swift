@@ -6,23 +6,22 @@
 //  Copyright © 2020 Yurii Chudnovets. All rights reserved.
 //
 
-import Foundation
 import Combine
 import RealmSwift
 
 final class SavedUsersViewModel: ObservableObject {
     
-    private var cancellables: [AnyCancellable] = []
     private var isViewDidLoad: Bool = false
     private let realmProvider: RealmProvider
     
     private var usersResults: Results<User>?
     private var notificationToken: NotificationToken?
     
-    //MARK: Input
+    // MARK: - Input
     
     enum Input {
         case onAppear
+        case onDelete(index: Int)
     }
     
     func apply(_ input: Input) {
@@ -32,10 +31,13 @@ final class SavedUsersViewModel: ObservableObject {
                 isViewDidLoad = true
                 loadData()
             }
+        case .onDelete(let index):
+            let user = savedUsers.remove(at: index)
+            user.remove(in: realmProvider)
         }
     }
     
-    // MARK: Output
+    // MARK: - Output
     
     @Published private(set) var savedUsers: [User] = []
     
@@ -49,7 +51,7 @@ final class SavedUsersViewModel: ObservableObject {
         notificationToken?.invalidate()
     }
     
-    // MARK: Setup
+    // MARK: - Realm observer
     
     fileprivate func loadData() {
         usersResults = realmProvider.realm.objects(User.self)
@@ -57,12 +59,8 @@ final class SavedUsersViewModel: ObservableObject {
             switch changes {
             case let .initial(results):
                 self.savedUsers = Array(results)
-            case let .update(results, deletions, insertions, modifications):
-                if self.savedUsers.isEmpty {
-                    self.savedUsers = Array(results)
-                } else if !self.savedUsers.isEmpty && results.isEmpty {
-                    self.savedUsers = []
-                }
+            case let .update(results, _, _, _):
+                self.savedUsers = Array(results)
             case .error(let error):
                 print(error)
             }

@@ -40,6 +40,21 @@ enum UserDataError: Error {
 
 extension User {
     
+    func makeCopy(newValues: (first: String, last: String, email: String, phone: String, image: String)) -> User {
+        let user = User()
+        user.name = Name()
+        user.picture = Picture()
+        user.gender = gender
+        user.name?.first        = newValues.first
+        user.name?.last         = newValues.last
+        user.email              = newValues.email
+        user.phone              = newValues.phone
+        user.picture?.large     = newValues.image
+        user.picture?.medium    = newValues.image
+        user.picture?.thumbnail = newValues.image
+        return user
+    }
+    
     func fill(with newValues: (first: String, last: String, email: String, phone: String, image: String)) {
         self.name?.first        = newValues.first
         self.name?.last         = newValues.last
@@ -98,6 +113,17 @@ extension User {
         do {
             try realm.write {
                 realm.add(self)
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    func remove(in realmProvider: RealmProvider = RealmProvider.users) {
+        let realm = realmProvider.realm
+        do {
+            try realm.write {
+                realm.delete(self)
             }
         } catch {
             print(error)

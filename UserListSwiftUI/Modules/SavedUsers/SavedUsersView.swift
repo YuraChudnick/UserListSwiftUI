@@ -14,13 +14,20 @@ struct SavedUsersView: View {
     
     var body: some View {
         NavigationView {
-//            ForEach(viewModel.savedUsers, id: \.self) { user in
-//                UserRow(user: user)
-//            }.onDelete(perform: { index in
-//                print(index)
-//            })
-            List(viewModel.savedUsers) { user in
-                UserRow(user: user)
+            VStack {
+                if viewModel.savedUsers.isEmpty {
+                  Text("No saved users")
+                } else {
+                    List {
+                        ForEach(viewModel.savedUsers, id: \.self) { user in
+                            UserRow(user: user)
+                        }.onDelete(perform: { indexSet in
+                            if let index = indexSet.first {
+                                self.viewModel.apply(.onDelete(index: index))
+                            }
+                        })
+                    }
+                }
             }
             .navigationBarTitle(Text("Saved users"), displayMode: .inline)
         }

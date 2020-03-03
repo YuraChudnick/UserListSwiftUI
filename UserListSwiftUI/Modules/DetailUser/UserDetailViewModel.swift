@@ -6,17 +6,10 @@
 //  Copyright © 2020 Yurii Chudnovets. All rights reserved.
 //
 
-import SwiftUI
 import Combine
 
 final class UserDetailViewModel: ObservableObject {
     
-    private var cancellables: [AnyCancellable] = []
-    private let user: User
-    private let realmProvider: RealmProvider
-    
-    let avatarViewModel: AvatarViewModel
-    @Published var paramaterViewModels: [ParameterViewModel] = []
     
     // MARK: - Input
     
@@ -31,6 +24,16 @@ final class UserDetailViewModel: ObservableObject {
         }
     }
     
+    // MARK: - Output
+    
+    @Published var paramaterViewModels: [ParameterViewModel] = []
+    
+    private let user: User
+    private let realmProvider: RealmProvider
+    let avatarViewModel: AvatarViewModel
+    
+    // MARK: - Init
+    
     init(user: User, realmProvider: RealmProvider = .users) {
         self.user = user
         self.realmProvider = realmProvider
@@ -41,6 +44,8 @@ final class UserDetailViewModel: ObservableObject {
                                ParameterViewModel(type: .phoneNumber, value: user.phone)]
     }
     
+    // MARK: - Actions
+    
     private func save() {
         if user.realm != nil {
             user.update(in: realmProvider,
@@ -50,7 +55,13 @@ final class UserDetailViewModel: ObservableObject {
                    phone: paramaterViewModels[3].value,
                    image: avatarViewModel.image ?? user.picture?.large ?? ""))
         } else {
-            user.save()
+            user
+                .makeCopy(newValues: (first: paramaterViewModels[0].value,
+                                      last: paramaterViewModels[1].value,
+                                      email: paramaterViewModels[2].value,
+                                      phone: paramaterViewModels[3].value,
+                                      image: avatarViewModel.image ?? user.picture?.large ?? ""))
+                .save(in: realmProvider)
         }
     }
     
