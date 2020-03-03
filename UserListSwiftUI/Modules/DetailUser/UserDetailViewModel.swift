@@ -30,14 +30,16 @@ final class UserDetailViewModel: ObservableObject {
     
     private let user: User
     private let realmProvider: RealmProvider
-    let avatarViewModel: AvatarViewModel
+    //let avatarViewModel: AvatarViewModel
+    let urlImageModel: UrlImageModel
     
     // MARK: - Init
     
     init(user: User, realmProvider: RealmProvider = .users) {
         self.user = user
         self.realmProvider = realmProvider
-        avatarViewModel = AvatarViewModel(image: user.picture?.large)
+        urlImageModel = UrlImageModel(urlString: user.picture?.large)
+        //avatarViewModel = AvatarViewModel(image: user.picture?.large)
         paramaterViewModels = [ParameterViewModel(type: .firstName, value: user.name?.first ?? ""),
                                ParameterViewModel(type: .lastName, value: user.name?.last ?? ""),
                                ParameterViewModel(type: .email, value: user.email),
@@ -53,14 +55,14 @@ final class UserDetailViewModel: ObservableObject {
                    last: paramaterViewModels[1].value,
                    email: paramaterViewModels[2].value,
                    phone: paramaterViewModels[3].value,
-                   image: avatarViewModel.image ?? user.picture?.large ?? ""))
+                   image: user.picture?.large ?? ""))
         } else {
             user
                 .makeCopy(newValues: (first: paramaterViewModels[0].value,
                                       last: paramaterViewModels[1].value,
                                       email: paramaterViewModels[2].value,
                                       phone: paramaterViewModels[3].value,
-                                      image: avatarViewModel.image ?? user.picture?.large ?? ""))
+                                      image: user.picture?.large ?? ""))
                 .save(in: realmProvider)
         }
     }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD556B6C23E02D64005DCF79 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD556B6B23E02D64005DCF79 /* PullToRefresh.swift */; };
-		CD73E1D3240D025E002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1D2240D025E002D597B /* SwiftPackageProductDependency */; };
+		CD73E1D3240D025E002D597B /* ListPagination in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1D2240D025E002D597B /* ListPagination */; };
 		CD73E1D9240D3636002D597B /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1D8240D3636002D597B /* ParameterView.swift */; };
 		CD73E1DB240D36AA002D597B /* ParameterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */; };
 		CD73E1DD240D37B5002D597B /* ParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DC240D37B5002D597B /* ParameterType.swift */; };
@@ -16,9 +16,9 @@
 		CD73E1E7240D5CFD002D597B /* SavedUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */; };
 		CD73E1EB240E539B002D597B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1EA240E539B002D597B /* ImagePicker.swift */; };
 		CD73E1EE240E54F2002D597B /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1ED240E54F2002D597B /* ImagePickerCoordinator.swift */; };
-		CD73E1F1240E732C002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1F0240E732C002D597B /* SwiftPackageProductDependency */; };
-		CD73E1FB240E75AE002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FA240E75AE002D597B /* SwiftPackageProductDependency */; };
-		CD73E1FD240E75AE002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FC240E75AE002D597B /* SwiftPackageProductDependency */; };
+		CD73E1F1240E732C002D597B /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1F0240E732C002D597B /* Introspect */; };
+		CD73E1FB240E75AE002D597B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FA240E75AE002D597B /* RealmSwift */; };
+		CD73E1FD240E75AE002D597B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FC240E75AE002D597B /* Realm */; };
 		CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64B2408201E009FED31 /* UrlImageView.swift */; };
 		CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64D24082079009FED31 /* UrlImageModel.swift */; };
 		CDABF65024082164009FED31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* ImageCache.swift */; };
@@ -99,10 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD73E1FB240E75AE002D597B /* BuildFile in Frameworks */,
-				CD73E1D3240D025E002D597B /* BuildFile in Frameworks */,
-				CD73E1F1240E732C002D597B /* BuildFile in Frameworks */,
-				CD73E1FD240E75AE002D597B /* BuildFile in Frameworks */,
+				CD73E1FB240E75AE002D597B /* RealmSwift in Frameworks */,
+				CD73E1D3240D025E002D597B /* ListPagination in Frameworks */,
+				CD73E1F1240E732C002D597B /* Introspect in Frameworks */,
+				CD73E1FD240E75AE002D597B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,10 +341,10 @@
 			);
 			name = UserListSwiftUI;
 			packageProductDependencies = (
-				CD73E1D2240D025E002D597B /* SwiftPackageProductDependency */,
-				CD73E1F0240E732C002D597B /* SwiftPackageProductDependency */,
-				CD73E1FA240E75AE002D597B /* SwiftPackageProductDependency */,
-				CD73E1FC240E75AE002D597B /* SwiftPackageProductDependency */,
+				CD73E1D2240D025E002D597B /* ListPagination */,
+				CD73E1F0240E732C002D597B /* Introspect */,
+				CD73E1FA240E75AE002D597B /* RealmSwift */,
+				CD73E1FC240E75AE002D597B /* Realm */,
 			);
 			productName = UserListSwiftUI;
 			productReference = CDD5340723DAF537009C4545 /* UserListSwiftUI.app */;
@@ -375,9 +375,9 @@
 			);
 			mainGroup = CDD533FE23DAF537009C4545;
 			packageReferences = (
-				CD73E1D1240D025E002D597B /* RemoteSwiftPackageReference */,
-				CD73E1EF240E732C002D597B /* RemoteSwiftPackageReference */,
-				CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */,
+				CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */,
+				CD73E1EF240E732C002D597B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				CD73E1F9240E75AE002D597B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = CDD5340823DAF537009C4545 /* Products */;
 			projectDirPath = "";
@@ -635,7 +635,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD73E1D1240D025E002D597B /* RemoteSwiftPackageReference */ = {
+		CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/crelies/ListPagination.git";
 			requirement = {
@@ -643,7 +643,7 @@
 				minimumVersion = 0.1.1;
 			};
 		};
-		CD73E1EF240E732C002D597B /* RemoteSwiftPackageReference */ = {
+		CD73E1EF240E732C002D597B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
 			requirement = {
@@ -651,7 +651,7 @@
 				minimumVersion = 0.1.0;
 			};
 		};
-		CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */ = {
+		CD73E1F9240E75AE002D597B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -662,24 +662,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD73E1D2240D025E002D597B /* SwiftPackageProductDependency */ = {
+		CD73E1D2240D025E002D597B /* ListPagination */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD73E1D1240D025E002D597B /* RemoteSwiftPackageReference */;
+			package = CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */;
 			productName = ListPagination;
 		};
-		CD73E1F0240E732C002D597B /* SwiftPackageProductDependency */ = {
+		CD73E1F0240E732C002D597B /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD73E1EF240E732C002D597B /* RemoteSwiftPackageReference */;
+			package = CD73E1EF240E732C002D597B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
 		};
-		CD73E1FA240E75AE002D597B /* SwiftPackageProductDependency */ = {
+		CD73E1FA240E75AE002D597B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */;
+			package = CD73E1F9240E75AE002D597B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
-		CD73E1FC240E75AE002D597B /* SwiftPackageProductDependency */ = {
+		CD73E1FC240E75AE002D597B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */;
+			package = CD73E1F9240E75AE002D597B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
 		};
 /* End XCSwiftPackageProductDependency section */

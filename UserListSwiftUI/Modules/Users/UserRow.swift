@@ -15,7 +15,7 @@ struct UserRow: View {
     var body: some View {
         NavigationLink(destination: UserDetailView(viewModel: UserDetailViewModel(user: user))) {
             HStack() {
-                UrlImageView(urlString: user.picture?.medium)
+                UrlImageView(model: UrlImageModel(urlString: user.picture?.medium))
                 VStack(alignment: .leading) {
                     Text(user.name?.formattedName ?? "unknown")
                         .font(.headline)

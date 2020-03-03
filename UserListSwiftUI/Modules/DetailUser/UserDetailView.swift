@@ -17,7 +17,8 @@ struct UserDetailView: View {
     var body: some View {
         List {
             Section {
-                AvatarView(viewModel: viewModel.avatarViewModel)
+                AvatarView(urlImageModel: viewModel.urlImageModel,
+                           showingImagePicker: $showingImagePicker)
                     .frame(height: 202)
             }
             Section {
@@ -31,7 +32,9 @@ struct UserDetailView: View {
         .gesture(DragGesture().onChanged {_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
         .listStyle(GroupedListStyle())
         .navigationBarTitle("Edit profile")
-        //.sheet(isPresented: <#T##Binding<Bool>#>, content: loadImage)
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
+        }
         .navigationBarItems(trailing:
             Button("Save") {
                 self.viewModel.apply(.onSave)
@@ -41,7 +44,7 @@ struct UserDetailView: View {
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        //image = Image(uiImage: inputImage)
+        viewModel.urlImageModel.image = inputImage
     }
     
 }

@@ -10,14 +10,14 @@ import SwiftUI
 
 struct AvatarView: View {
     
-    @State var viewModel: AvatarViewModel
-    @State private var showingImagePicker = false
+    @ObservedObject var urlImageModel: UrlImageModel
+    @Binding var showingImagePicker: Bool
     
     var body: some View {
         HStack {
             Spacer()
             VStack(alignment: .center) {
-                UrlImageView(imageSize: CGSize(width: 85, height: 85), urlString: viewModel.image)
+                UrlImageView(imageSize: CGSize(width: 85, height: 85), model: urlImageModel)
                 Button("Change avatar") {
                     print("pressed")
                     self.showingImagePicker = true
@@ -31,8 +31,9 @@ struct AvatarView: View {
     
 }
 
-struct AvatarView_Previews: PreviewProvider {
-    static var previews: some View {
-        AvatarView(viewModel: AvatarViewModel(image: "https://randomuser.me/api/portraits/women/88.jpg"))
-    }
-}
+//struct AvatarView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        AvatarView(urlImageModel: UrlImageModel(urlString: "https://randomuser.me/api/portraits/women/88.jpg"), showingImagePicker: <#T##Binding<Bool>#>)
+//    }
+//}

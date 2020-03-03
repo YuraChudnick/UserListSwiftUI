@@ -13,15 +13,15 @@ struct UrlImageView: View {
     @ObservedObject var urlImageModel: UrlImageModel
     let imageSize: CGSize
     
-    init(imageSize: CGSize = CGSize(width: 40, height: 40), urlString: String?) {
+    init(imageSize: CGSize = CGSize(width: 40, height: 40), model: UrlImageModel) {
         self.imageSize = imageSize
-        urlImageModel = UrlImageModel(urlString: urlString)
+        self.urlImageModel = model
     }
     
     var body: some View {
         Image(uiImage: urlImageModel.image ?? UrlImageView.defaultImage!)
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
             .foregroundColor(Color.gray)
             .frame(width: imageSize.width, height: imageSize.height)
             .clipShape(Circle())
