@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99CC19B688C37913167138E6 /* Pods_UserListSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCF593D6B67916FAB31F6CB /* Pods_UserListSwiftUI.framework */; };
 		CD556B6C23E02D64005DCF79 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD556B6B23E02D64005DCF79 /* PullToRefresh.swift */; };
-		CD73E1D3240D025E002D597B /* ListPagination in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1D2240D025E002D597B /* ListPagination */; };
+		CD73E1D3240D025E002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1D2240D025E002D597B /* SwiftPackageProductDependency */; };
 		CD73E1D9240D3636002D597B /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1D8240D3636002D597B /* ParameterView.swift */; };
 		CD73E1DB240D36AA002D597B /* ParameterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */; };
 		CD73E1DD240D37B5002D597B /* ParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DC240D37B5002D597B /* ParameterType.swift */; };
@@ -17,6 +16,9 @@
 		CD73E1E7240D5CFD002D597B /* SavedUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */; };
 		CD73E1EB240E539B002D597B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1EA240E539B002D597B /* ImagePicker.swift */; };
 		CD73E1EE240E54F2002D597B /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1ED240E54F2002D597B /* ImagePickerCoordinator.swift */; };
+		CD73E1F1240E732C002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1F0240E732C002D597B /* SwiftPackageProductDependency */; };
+		CD73E1FB240E75AE002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FA240E75AE002D597B /* SwiftPackageProductDependency */; };
+		CD73E1FD240E75AE002D597B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FC240E75AE002D597B /* SwiftPackageProductDependency */; };
 		CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64B2408201E009FED31 /* UrlImageView.swift */; };
 		CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64D24082079009FED31 /* UrlImageModel.swift */; };
 		CDABF65024082164009FED31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* ImageCache.swift */; };
@@ -49,9 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CCF593D6B67916FAB31F6CB /* Pods_UserListSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserListSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		632CAC2B6F4B276AC5AB9239 /* Pods-UserListSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
-		BBD5B19186D3750A011FE1BC /* Pods-UserListSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		CD556B6B23E02D64005DCF79 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		CD73E1D8240D3636002D597B /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewModel.swift; sourceTree = "<group>"; };
@@ -60,6 +59,8 @@
 		CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUsersViewModel.swift; sourceTree = "<group>"; };
 		CD73E1EA240E539B002D597B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CD73E1ED240E54F2002D597B /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		CD73E1F2240E7426002D597B /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD73E1F3240E7426002D597B /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDABF64B2408201E009FED31 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
 		CDABF64D24082079009FED31 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 		CDABF64F24082164009FED31 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -98,8 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD73E1D3240D025E002D597B /* ListPagination in Frameworks */,
-				99CC19B688C37913167138E6 /* Pods_UserListSwiftUI.framework in Frameworks */,
+				CD73E1FB240E75AE002D597B /* BuildFile in Frameworks */,
+				CD73E1D3240D025E002D597B /* BuildFile in Frameworks */,
+				CD73E1F1240E732C002D597B /* BuildFile in Frameworks */,
+				CD73E1FD240E75AE002D597B /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +112,6 @@
 		B98FE21E601FF05CFDE529F2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBD5B19186D3750A011FE1BC /* Pods-UserListSwiftUI.debug.xcconfig */,
-				632CAC2B6F4B276AC5AB9239 /* Pods-UserListSwiftUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -317,7 +318,8 @@
 		E61FB3BD11D8F8643838DAB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5CCF593D6B67916FAB31F6CB /* Pods_UserListSwiftUI.framework */,
+				CD73E1F2240E7426002D597B /* Realm.framework */,
+				CD73E1F3240E7426002D597B /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -329,11 +331,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDD5341B23DAF53A009C4545 /* Build configuration list for PBXNativeTarget "UserListSwiftUI" */;
 			buildPhases = (
-				77D09DD9BAF2A5CF5D05D25F /* [CP] Check Pods Manifest.lock */,
 				CDD5340323DAF537009C4545 /* Sources */,
 				CDD5340423DAF537009C4545 /* Frameworks */,
 				CDD5340523DAF537009C4545 /* Resources */,
-				2941933D1D1AF526A285EF22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,7 +341,10 @@
 			);
 			name = UserListSwiftUI;
 			packageProductDependencies = (
-				CD73E1D2240D025E002D597B /* ListPagination */,
+				CD73E1D2240D025E002D597B /* SwiftPackageProductDependency */,
+				CD73E1F0240E732C002D597B /* SwiftPackageProductDependency */,
+				CD73E1FA240E75AE002D597B /* SwiftPackageProductDependency */,
+				CD73E1FC240E75AE002D597B /* SwiftPackageProductDependency */,
 			);
 			productName = UserListSwiftUI;
 			productReference = CDD5340723DAF537009C4545 /* UserListSwiftUI.app */;
@@ -372,7 +375,9 @@
 			);
 			mainGroup = CDD533FE23DAF537009C4545;
 			packageReferences = (
-				CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */,
+				CD73E1D1240D025E002D597B /* RemoteSwiftPackageReference */,
+				CD73E1EF240E732C002D597B /* RemoteSwiftPackageReference */,
+				CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = CDD5340823DAF537009C4545 /* Products */;
 			projectDirPath = "";
@@ -395,48 +400,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2941933D1D1AF526A285EF22 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserListSwiftUI/Pods-UserListSwiftUI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		77D09DD9BAF2A5CF5D05D25F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UserListSwiftUI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDD5340323DAF537009C4545 /* Sources */ = {
@@ -610,7 +573,6 @@
 		};
 		CDD5341C23DAF53A009C4545 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBD5B19186D3750A011FE1BC /* Pods-UserListSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -631,7 +593,6 @@
 		};
 		CDD5341D23DAF53A009C4545 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 632CAC2B6F4B276AC5AB9239 /* Pods-UserListSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,7 +635,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */ = {
+		CD73E1D1240D025E002D597B /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/crelies/ListPagination.git";
 			requirement = {
@@ -682,13 +643,44 @@
 				minimumVersion = 0.1.1;
 			};
 		};
+		CD73E1EF240E732C002D597B /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+		CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD73E1D2240D025E002D597B /* ListPagination */ = {
+		CD73E1D2240D025E002D597B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */;
+			package = CD73E1D1240D025E002D597B /* RemoteSwiftPackageReference */;
 			productName = ListPagination;
+		};
+		CD73E1F0240E732C002D597B /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD73E1EF240E732C002D597B /* RemoteSwiftPackageReference */;
+			productName = Introspect;
+		};
+		CD73E1FA240E75AE002D597B /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */;
+			productName = RealmSwift;
+		};
+		CD73E1FC240E75AE002D597B /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD73E1F9240E75AE002D597B /* RemoteSwiftPackageReference */;
+			productName = Realm;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
