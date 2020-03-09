@@ -27,19 +27,16 @@ final class UserDetailViewModel: ObservableObject {
     // MARK: - Output
     
     @Published var paramaterViewModels: [ParameterViewModel] = []
+    @Published var user: User
     
-    private let user: User
     private let realmProvider: RealmProvider
-    //let avatarViewModel: AvatarViewModel
-    let urlImageModel: UrlImageModel
+    let cache = TemporaryImageCache.getImageCache()
     
     // MARK: - Init
     
     init(user: User, realmProvider: RealmProvider = .users) {
         self.user = user
         self.realmProvider = realmProvider
-        urlImageModel = UrlImageModel(urlString: user.picture?.large)
-        //avatarViewModel = AvatarViewModel(image: user.picture?.large)
         paramaterViewModels = [ParameterViewModel(type: .firstName, value: user.name?.first ?? ""),
                                ParameterViewModel(type: .lastName, value: user.name?.last ?? ""),
                                ParameterViewModel(type: .email, value: user.email),

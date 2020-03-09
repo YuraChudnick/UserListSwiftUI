@@ -12,16 +12,13 @@
 		CD73E1D9240D3636002D597B /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1D8240D3636002D597B /* ParameterView.swift */; };
 		CD73E1DB240D36AA002D597B /* ParameterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */; };
 		CD73E1DD240D37B5002D597B /* ParameterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1DC240D37B5002D597B /* ParameterType.swift */; };
-		CD73E1E5240D5AD1002D597B /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1E4240D5AD1002D597B /* AvatarViewModel.swift */; };
 		CD73E1E7240D5CFD002D597B /* SavedUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */; };
 		CD73E1EB240E539B002D597B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1EA240E539B002D597B /* ImagePicker.swift */; };
 		CD73E1EE240E54F2002D597B /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73E1ED240E54F2002D597B /* ImagePickerCoordinator.swift */; };
 		CD73E1F1240E732C002D597B /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1F0240E732C002D597B /* Introspect */; };
 		CD73E1FB240E75AE002D597B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FA240E75AE002D597B /* RealmSwift */; };
 		CD73E1FD240E75AE002D597B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CD73E1FC240E75AE002D597B /* Realm */; };
-		CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64B2408201E009FED31 /* UrlImageView.swift */; };
-		CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64D24082079009FED31 /* UrlImageModel.swift */; };
-		CDABF65024082164009FED31 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* ImageCache.swift */; };
+		CDABF65024082164009FED31 /* TemporaryImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABF64F24082164009FED31 /* TemporaryImageCache.swift */; };
 		CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340A23DAF537009C4545 /* AppDelegate.swift */; };
 		CDD5340D23DAF537009C4545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5340C23DAF537009C4545 /* SceneDelegate.swift */; };
 		CDD5341123DAF53A009C4545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD5341023DAF53A009C4545 /* Assets.xcassets */; };
@@ -49,6 +46,10 @@
 		DE063296240C36E9004AAACE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE063295240C36E9004AAACE /* AvatarView.swift */; };
 		DE063298240C39C6004AAACE /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE063297240C39C6004AAACE /* UserDetailViewModel.swift */; };
 		DE98E8FB240ED71A00251E3E /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98E8FA240ED71A00251E3E /* UINavigationController+Extension.swift */; };
+		DE98E9022416449500251E3E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DE98E9012416449500251E3E /* IQKeyboardManagerSwift */; };
+		DE98E90724167D0800251E3E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98E90624167D0800251E3E /* ImageLoader.swift */; };
+		DE98E90924167D6900251E3E /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98E90824167D6900251E3E /* AsyncImage.swift */; };
+		DE98E90B2416826900251E3E /* DefaultImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98E90A2416826900251E3E /* DefaultImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,15 +57,12 @@
 		CD73E1D8240D3636002D597B /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		CD73E1DA240D36AA002D597B /* ParameterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewModel.swift; sourceTree = "<group>"; };
 		CD73E1DC240D37B5002D597B /* ParameterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterType.swift; sourceTree = "<group>"; };
-		CD73E1E4240D5AD1002D597B /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
 		CD73E1E6240D5CFD002D597B /* SavedUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUsersViewModel.swift; sourceTree = "<group>"; };
 		CD73E1EA240E539B002D597B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CD73E1ED240E54F2002D597B /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 		CD73E1F2240E7426002D597B /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD73E1F3240E7426002D597B /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDABF64B2408201E009FED31 /* UrlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageView.swift; sourceTree = "<group>"; };
-		CDABF64D24082079009FED31 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
-		CDABF64F24082164009FED31 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		CDABF64F24082164009FED31 /* TemporaryImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryImageCache.swift; sourceTree = "<group>"; };
 		CDD5340723DAF537009C4545 /* UserListSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5340A23DAF537009C4545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD5340C23DAF537009C4545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +92,9 @@
 		DE063295240C36E9004AAACE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		DE063297240C39C6004AAACE /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		DE98E8FA240ED71A00251E3E /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		DE98E90624167D0800251E3E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		DE98E90824167D6900251E3E /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		DE98E90A2416826900251E3E /* DefaultImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE98E9022416449500251E3E /* IQKeyboardManagerSwift in Frameworks */,
 				CD73E1FB240E75AE002D597B /* RealmSwift in Frameworks */,
 				CD73E1D3240D025E002D597B /* ListPagination in Frameworks */,
 				CD73E1F1240E732C002D597B /* Introspect in Frameworks */,
@@ -122,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				DE063295240C36E9004AAACE /* AvatarView.swift */,
-				CD73E1E4240D5AD1002D597B /* AvatarViewModel.swift */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -144,16 +145,6 @@
 				CD73E1ED240E54F2002D597B /* ImagePickerCoordinator.swift */,
 			);
 			path = ImagePicker;
-			sourceTree = "<group>";
-		};
-		CDABF64A24081FFE009FED31 /* ImageCacher */ = {
-			isa = PBXGroup;
-			children = (
-				CDABF64B2408201E009FED31 /* UrlImageView.swift */,
-				CDABF64D24082079009FED31 /* UrlImageModel.swift */,
-				CDABF64F24082164009FED31 /* ImageCache.swift */,
-			);
-			path = ImageCacher;
 			sourceTree = "<group>";
 		};
 		CDABF651240825BD009FED31 /* API */ = {
@@ -311,11 +302,22 @@
 		CDD5344D23DF0804009C4545 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DE98E90524167CF400251E3E /* ImageLoader */,
 				CDABF653240825D9009FED31 /* Realm */,
 				CDABF651240825BD009FED31 /* API */,
-				CDABF64A24081FFE009FED31 /* ImageCacher */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DE98E90524167CF400251E3E /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				DE98E90624167D0800251E3E /* ImageLoader.swift */,
+				DE98E90824167D6900251E3E /* AsyncImage.swift */,
+				DE98E90A2416826900251E3E /* DefaultImageView.swift */,
+				CDABF64F24082164009FED31 /* TemporaryImageCache.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 		E61FB3BD11D8F8643838DAB8 /* Frameworks */ = {
@@ -348,6 +350,7 @@
 				CD73E1F0240E732C002D597B /* Introspect */,
 				CD73E1FA240E75AE002D597B /* RealmSwift */,
 				CD73E1FC240E75AE002D597B /* Realm */,
+				DE98E9012416449500251E3E /* IQKeyboardManagerSwift */,
 			);
 			productName = UserListSwiftUI;
 			productReference = CDD5340723DAF537009C4545 /* UserListSwiftUI.app */;
@@ -381,6 +384,7 @@
 				CD73E1D1240D025E002D597B /* XCRemoteSwiftPackageReference "ListPagination" */,
 				CD73E1EF240E732C002D597B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				CD73E1F9240E75AE002D597B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				DE98E9002416449500251E3E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = CDD5340823DAF537009C4545 /* Products */;
 			projectDirPath = "";
@@ -414,6 +418,7 @@
 				CDD5345723DF0FAE009C4545 /* RequestType.swift in Sources */,
 				CD556B6C23E02D64005DCF79 /* PullToRefresh.swift in Sources */,
 				CD73E1DB240D36AA002D597B /* ParameterViewModel.swift in Sources */,
+				DE98E90924167D6900251E3E /* AsyncImage.swift in Sources */,
 				CD73E1E7240D5CFD002D597B /* SavedUsersViewModel.swift in Sources */,
 				CDD5344F23DF0832009C4545 /* APIService.swift in Sources */,
 				CDD5345323DF0918009C4545 /* UsersResponse.swift in Sources */,
@@ -421,26 +426,25 @@
 				CD73E1D9240D3636002D597B /* ParameterView.swift in Sources */,
 				CDD5342023DB09C6009C4545 /* AppView.swift in Sources */,
 				CDD5340B23DAF537009C4545 /* AppDelegate.swift in Sources */,
-				CDABF64E24082079009FED31 /* UrlImageModel.swift in Sources */,
 				DE063298240C39C6004AAACE /* UserDetailViewModel.swift in Sources */,
+				DE98E90724167D0800251E3E /* ImageLoader.swift in Sources */,
 				CDD5343523DB1125009C4545 /* String+Extension.swift in Sources */,
 				CDD5342E23DB10B6009C4545 /* RealmProvider.swift in Sources */,
 				CDD5345523DF095E009C4545 /* UsersRequest.swift in Sources */,
 				CDD5345923DF373A009C4545 /* UserDetailView.swift in Sources */,
 				CDD5340D23DAF537009C4545 /* SceneDelegate.swift in Sources */,
 				CD73E1EB240E539B002D597B /* ImagePicker.swift in Sources */,
-				CDABF65024082164009FED31 /* ImageCache.swift in Sources */,
+				CDABF65024082164009FED31 /* TemporaryImageCache.swift in Sources */,
 				CDD5343423DB1125009C4545 /* NSObejct+ClassName.swift in Sources */,
-				CDABF64C2408201E009FED31 /* UrlImageView.swift in Sources */,
 				CD73E1DD240D37B5002D597B /* ParameterType.swift in Sources */,
 				DE063296240C36E9004AAACE /* AvatarView.swift in Sources */,
 				CDD5342423DB0A1A009C4545 /* SavedUsersView.swift in Sources */,
 				CDD5343623DB1125009C4545 /* Path.swift in Sources */,
 				CDD5343723DB1125009C4545 /* Array+Extension.swift in Sources */,
 				CDD5345123DF0865009C4545 /* APIServiceError.swift in Sources */,
-				CD73E1E5240D5AD1002D597B /* AvatarViewModel.swift in Sources */,
 				CDD5343B23DB1291009C4545 /* UserRow.swift in Sources */,
 				CDD5343E23DEFB40009C4545 /* UsersViewModel.swift in Sources */,
+				DE98E90B2416826900251E3E /* DefaultImageView.swift in Sources */,
 				DE98E8FB240ED71A00251E3E /* UINavigationController+Extension.swift in Sources */,
 				CDD5342923DB103A009C4545 /* Name.swift in Sources */,
 				CDD5342723DB0F93009C4545 /* User.swift in Sources */,
@@ -581,7 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UserListSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 789NVTRQ75;
+				DEVELOPMENT_TEAM = VWAQ64T25E;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UserListSwiftUI/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UserListSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 789NVTRQ75;
+				DEVELOPMENT_TEAM = VWAQ64T25E;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UserListSwiftUI/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,6 +667,14 @@
 				minimumVersion = 4.3.2;
 			};
 		};
+		DE98E9002416449500251E3E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -685,6 +697,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD73E1F9240E75AE002D597B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
+		};
+		DE98E9012416449500251E3E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE98E9002416449500251E3E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

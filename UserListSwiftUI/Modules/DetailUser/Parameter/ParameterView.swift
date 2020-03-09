@@ -16,7 +16,7 @@ struct ParameterView: View {
         HStack {
             Text(viewModel.type.rawValue)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
-            TextField("Enter first name", text: $viewModel.value)
+            TextField("Enter " + viewModel.type.rawValue.lowercased(), text: $viewModel.value)
                 .disableAutocorrection(true)
                 .multilineTextAlignment(.trailing)
                 .lineLimit(1)

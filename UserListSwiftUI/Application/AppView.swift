@@ -11,23 +11,28 @@ import SwiftUI
 struct AppView: View {
     
     @State private var selection = 0
+    let usersViewModel: UsersViewModel = .init()
+    let savedUsersViewModel: SavedUsersViewModel = .init()
     
     var body: some View {
-        NavigationView {
-            TabView(selection: $selection) {
-                UsersView(viewModel: .init())
-                    .tabItem {
-                        Image(systemName: "person.2.fill")
-                        Text("Users")
-                }.tag(0)
-                SavedUsersView(viewModel: .init())
-                    .tabItem {
-                        Image(systemName: "star.fill")
-                        Text("Saved")
-                }.tag(1)
-            }
-            .navigationBarTitle(Text(selection == 0 ? "Users" : "Saved users"), displayMode: .inline)
+        TabView(selection: $selection) {
+            UsersView(viewModel: usersViewModel)
+            .tabItem {
+                    Image(systemName: "person.2.fill")
+                    Text("Users")
+            }.tag(0)
+            
+            SavedUsersView(viewModel: savedUsersViewModel)
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Saved")
+            }.tag(1)
         }
+        .edgesIgnoringSafeArea(.top)
+//        NavigationView {
+//            
+//            .navigationBarTitle(Text(selection == 0 ? "Users" : "Saved users"), displayMode: .inline)
+//        }
     }
     
 }

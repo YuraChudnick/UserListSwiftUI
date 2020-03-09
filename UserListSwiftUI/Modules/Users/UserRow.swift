@@ -9,28 +9,35 @@
 import SwiftUI
  
 struct UserRow: View {
-    
-    @State var user: User
+        
+    @EnvironmentObject var userDetailViewModel: UserDetailViewModel
+    @State private var isActive: Bool = false
     
     var body: some View {
-        NavigationLink(destination: UserDetailView(viewModel: UserDetailViewModel(user: user))) {
+        NavigationLink(destination: UserDetailView(isActive: $isActive).environmentObject(userDetailViewModel), isActive: $isActive) {
             HStack() {
-                UrlImageView(model: UrlImageModel(urlString: user.picture?.medium))
+                AsyncImage(url: userDetailViewModel.user.getAvatarUrl(.medium),
+                           placeholder: DefaultImageView(),
+                           cache: userDetailViewModel.cache, configuration: { $0.resizable() })
+                    .scaledToFill()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
                 VStack(alignment: .leading) {
-                    Text(user.name?.formattedName ?? "unknown")
+                    Text(userDetailViewModel.user.name?.formattedName ?? "unknown")
                         .font(.headline)
-                    Text(user.phone)
+                    Text(userDetailViewModel.user.phone)
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
                 }
                 Spacer()
             }
         }
+        .isDetailLink(false)
     }
 }
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        UserRow(user: User.example)
+        UserRow().environmentObject(UserDetailViewModel(user: User.example))
     }
 }

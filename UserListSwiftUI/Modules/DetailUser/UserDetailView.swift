@@ -10,15 +10,16 @@ import SwiftUI
 
 struct UserDetailView: View {
     
-    @ObservedObject var viewModel: UserDetailViewModel
+    @EnvironmentObject var viewModel: UserDetailViewModel
+    @Binding var isActive: Bool
     @State private var inputImage: UIImage?
     @State private var showingImagePicker = false
     
     var body: some View {
         List {
             Section {
-                AvatarView(urlImageModel: viewModel.urlImageModel,
-                           showingImagePicker: $showingImagePicker)
+                AvatarView(showingImagePicker: $showingImagePicker)
+                    .environmentObject(viewModel)
                     .frame(height: 202)
             }
             Section {
@@ -38,19 +39,30 @@ struct UserDetailView: View {
         .navigationBarItems(trailing:
             Button("Save") {
                 self.viewModel.apply(.onSave)
+                self.isActive = false
             }
         )
     }
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        viewModel.urlImageModel.image = inputImage
+        //viewModel.urlImageModel.image = inputImage
     }
     
 }
 
 struct UserDetailView_Previews: PreviewProvider {
+        
     static var previews: some View {
-        UserDetailView(viewModel: UserDetailViewModel(user: User.example))
+        PreviewWrapper()
     }
+    
+    struct PreviewWrapper: View {
+        @State(initialValue: false) var isActive: Bool
+        
+        var body: some View {
+            UserDetailView(isActive: $isActive).environmentObject(UserDetailViewModel(user: User.example))
+        }
+    }
+    
 }
