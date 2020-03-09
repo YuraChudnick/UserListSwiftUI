@@ -21,18 +21,22 @@ struct UsersView: View {
                         Text("Loading ...")
                             .padding(.vertical)
                     }
-                }.onAppear {
-                    self.viewModel.listItemAppears(user)
                 }
+                .onAppear(perform: { self.viewModel.listItemAppears(user) })
             }
-            .pullToRefresh(isShowing: $viewModel.isRefreshing, onRefresh: {
-                print("StartRefreshing")
-                self.viewModel.apply(.onLoadData)
-            })
+            .pullToRefresh(isShowing: $viewModel.isRefreshing, onRefresh: onRefresh)
             .navigationBarTitle("Users", displayMode: .inline)
             .onAppear(perform: { self.viewModel.apply(.onAppear) })
+            .alert(isPresented: $viewModel.isErrorShown) {
+                Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("Close")))
+            }
         }
     }
+    
+    private func onRefresh() {
+        viewModel.apply(.onLoadData)
+    }
+    
 }
 
 struct UsersView_Previews: PreviewProvider {

@@ -11,6 +11,7 @@ import SwiftUI
 struct AvatarView: View {
     
     @EnvironmentObject var userDetailViewModel: UserDetailViewModel
+    @Binding var newImage: UIImage?
     @Binding var showingImagePicker: Bool
     
     var body: some View {
@@ -18,7 +19,7 @@ struct AvatarView: View {
             Spacer()
             VStack(alignment: .center) {
                 AsyncImage(url: userDetailViewModel.user.getAvatarUrl(.large),
-                       placeholder: DefaultImageView(),
+                           placeholder: DefaultImageView(), newImage: $newImage,
                        cache: userDetailViewModel.cache, configuration: { $0.resizable() })
                 .scaledToFill()
                 .frame(width: 85, height: 85)
@@ -44,9 +45,11 @@ struct AvatarView_Previews: PreviewProvider {
     
     struct PreviewWrapper: View {
         @State(initialValue: false) var showingImagePicker: Bool
+        @State(initialValue: nil) var image: UIImage?
         
         var body: some View {
-            AvatarView(showingImagePicker: $showingImagePicker).environmentObject(UserDetailViewModel(user: User.example))
+            AvatarView(newImage: $image, showingImagePicker: $showingImagePicker)
+                .environmentObject(UserDetailViewModel(user: User.example))
         }
     }
     

@@ -9,7 +9,7 @@
 import Combine
 
 class ParameterViewModel: ObservableObject, Identifiable {
- 
+    
     let type: ParameterType
     @Published var value: String
     
