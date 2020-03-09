@@ -20,12 +20,9 @@ struct SavedUsersView: View {
                 } else {
                     List {
                         ForEach(viewModel.savedUsers, id: \.self) { user in
-                            UserRow().environmentObject(UserDetailViewModel(user: user))
-                        }.onDelete(perform: { indexSet in
-                            if let index = indexSet.first {
-                                self.viewModel.apply(.onDelete(index: index))
-                            }
-                        })
+                            UserRow(userDetailViewModel: UserDetailViewModel(user: user))
+                        }
+                        .onDelete(perform: onDelete)
                     }
                 }
             }
@@ -34,6 +31,11 @@ struct SavedUsersView: View {
         }
         .onAppear(perform: { self.viewModel.apply(.onAppear) })
     }
+
+    private func onDelete(offsets: IndexSet) {
+        viewModel.apply(.onDelete(offsets: offsets))
+    }
+    
 }
 
 struct SavedUsersView_Previews: PreviewProvider {

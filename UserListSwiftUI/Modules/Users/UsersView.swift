@@ -15,7 +15,7 @@ struct UsersView: View {
         NavigationView {
             List(viewModel.users) { user in
                 VStack(alignment: .center) {
-                    UserRow().environmentObject(UserDetailViewModel(user: user))
+                    UserRow(userDetailViewModel: UserDetailViewModel(user: user))
                     if self.viewModel.isRefreshing && self.viewModel.users.isLastItem(user) {
                         Divider()
                         Text("Loading ...")

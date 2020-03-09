@@ -10,7 +10,7 @@ import SwiftUI
  
 struct UserRow: View {
         
-    @EnvironmentObject var userDetailViewModel: UserDetailViewModel
+    @State var userDetailViewModel: UserDetailViewModel
     @State private var isActive: Bool = false
     
     var body: some View {
@@ -38,6 +38,6 @@ struct UserRow: View {
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        UserRow().environmentObject(UserDetailViewModel(user: User.example))
+        UserRow(userDetailViewModel: UserDetailViewModel(user: User.example))
     }
 }

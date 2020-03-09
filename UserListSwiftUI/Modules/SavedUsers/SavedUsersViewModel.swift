@@ -8,6 +8,7 @@
 
 import Combine
 import RealmSwift
+import Foundation
 
 final class SavedUsersViewModel: ObservableObject {
     
@@ -21,7 +22,7 @@ final class SavedUsersViewModel: ObservableObject {
     
     enum Input {
         case onAppear
-        case onDelete(index: Int)
+        case onDelete(offsets: IndexSet)
     }
     
     func apply(_ input: Input) {
@@ -31,9 +32,15 @@ final class SavedUsersViewModel: ObservableObject {
                 isViewDidLoad = true
                 loadData()
             }
-        case .onDelete(let index):
-            let user = savedUsers.remove(at: index)
-            user.remove(in: realmProvider)
+        case .onDelete(let offsets):
+            var toDelete: [User] = []
+            for index in offsets {
+                toDelete.append(savedUsers[index])
+            }
+            savedUsers.remove(atOffsets: offsets)
+            DispatchQueue.main.async {
+                User.remove(users: toDelete, in: self.realmProvider)
+            }
         }
     }
     
@@ -59,7 +66,8 @@ final class SavedUsersViewModel: ObservableObject {
             switch changes {
             case let .initial(results):
                 self.savedUsers = Array(results)
-            case let .update(results, _, _, _):
+            case let .update(results, deletions, _, _):
+                guard deletions.isEmpty else { return }
                 self.savedUsers = Array(results)
             case .error(let error):
                 print(error)

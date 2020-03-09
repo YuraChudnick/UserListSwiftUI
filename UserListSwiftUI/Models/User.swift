@@ -131,6 +131,17 @@ extension User {
         }
     }
     
+    static func remove(users: [User], in realmProvider: RealmProvider = RealmProvider.users) {
+        let realm = realmProvider.realm
+        do {
+            try realm.write {
+                realm.delete(users)
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
     static func loadUsers() -> [User] {
         let users = RealmProvider.users.realm.objects(User.self)
         var result: [User] = []
