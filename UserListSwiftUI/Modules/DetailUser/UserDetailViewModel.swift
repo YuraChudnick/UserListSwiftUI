@@ -16,6 +16,7 @@ final class UserDetailViewModel: ObservableObject {
     
     @Published var paramaterViewModels: [ParameterViewModel] = []
     @Published var user: User
+    @Published var isActive: Bool = false
     
     init(user: User, realmProvider: RealmProvider = .users) {
         self.user = user
@@ -43,19 +44,25 @@ final class UserDetailViewModel: ObservableObject {
     
     private func bindInputs() {
         guard  user.realm == nil else { return }
-        let firstNameSink = paramaterViewModels[0].$value.sink { [weak user] (newValue) in
-            user?.name?.first = newValue
+//        let firstNameSink = paramaterViewModels[0].$value.sink { [weak user] (newValue) in
+//            user?.name?.first = newValue
+//        }
+//        let lastNameSink = paramaterViewModels[1].$value.sink { [weak user] (newValue) in
+//            user?.name?.last = newValue
+//        }
+//        let emailSink = paramaterViewModels[2].$value.sink { [weak user] (newValue) in
+//            user?.email = newValue
+//        }
+//        let phoneSink = paramaterViewModels[3].$value.sink { [weak user] (newValue) in
+//            user?.phone = newValue
+//        }
+        let isActiveSink = $isActive
+            .sink { [weak self] newValue in
+            if !newValue {
+                self?.restore()
+            }
         }
-        let lastNameSink = paramaterViewModels[1].$value.sink { [weak user] (newValue) in
-            user?.name?.last = newValue
-        }
-        let emailSink = paramaterViewModels[2].$value.sink { [weak user] (newValue) in
-            user?.email = newValue
-        }
-        let phoneSink = paramaterViewModels[3].$value.sink { [weak user] (newValue) in
-            user?.phone = newValue
-        }
-        cancellables = [firstNameSink, lastNameSink, emailSink, phoneSink]
+        cancellables = [isActiveSink]
     }
     
     // MARK: - Actions
@@ -77,6 +84,14 @@ final class UserDetailViewModel: ObservableObject {
                                       image: user.picture?.large ?? ""))
                 .save(in: realmProvider)
         }
+        isActive = false
+    }
+    
+    private func restore() {
+        paramaterViewModels[0].value = user.name?.first ?? ""
+        paramaterViewModels[1].value = user.name?.last ?? ""
+        paramaterViewModels[2].value = user.email
+        paramaterViewModels[3].value = user.phone
     }
     
 }

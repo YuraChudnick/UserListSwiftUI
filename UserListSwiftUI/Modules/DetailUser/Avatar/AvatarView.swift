@@ -20,16 +20,16 @@ struct AvatarView: View {
             VStack(alignment: .center) {
                 AsyncImage(url: userDetailViewModel.user.getAvatarUrl(.large),
                            placeholder: DefaultImageView(), newImage: $newImage,
-                       cache: userDetailViewModel.cache, configuration: { $0.resizable() })
-                .scaledToFill()
-                .frame(width: 85, height: 85)
-                .clipShape(Circle())
+                           cache: userDetailViewModel.cache, configuration: { $0.resizable() })
+                    .scaledToFill()
+                    .frame(width: 85, height: 85)
+                    .clipShape(Circle())
                 Button("Change avatar") {
                     print("pressed")
                     self.showingImagePicker = true
                 }
-                .font(.subheadline)
-                .foregroundColor(Color.blue)
+                    .font(.subheadline)
+                    .foregroundColor(Color.blue)
             }
             Spacer()
         }

@@ -11,7 +11,6 @@ import SwiftUI
 struct UserDetailView: View {
     
     @EnvironmentObject var viewModel: UserDetailViewModel
-    @Binding var isActive: Bool
     @Binding var inputImage: UIImage?
     @State private var showingImagePicker = false
     
@@ -38,7 +37,6 @@ struct UserDetailView: View {
         .navigationBarItems(trailing:
             Button("Save") {
                 self.viewModel.apply(.onSave)
-                self.isActive = false
             }
         )
     }
@@ -56,7 +54,7 @@ struct UserDetailView_Previews: PreviewProvider {
         @State(initialValue: nil) var newImage: UIImage?
         
         var body: some View {
-            UserDetailView(isActive: $isActive, inputImage: $newImage).environmentObject(UserDetailViewModel(user: User.example))
+            UserDetailView(inputImage: $newImage).environmentObject(UserDetailViewModel(user: User.example))
         }
     }
     

@@ -11,11 +11,10 @@ import SwiftUI
 struct UserRow: View {
         
     @ObservedObject var userDetailViewModel: UserDetailViewModel
-    @State private var isActive: Bool = false
     @State private var newImage: UIImage?
     
     var body: some View {
-        NavigationLink(destination: UserDetailView(isActive: $isActive, inputImage: $newImage).environmentObject(userDetailViewModel), isActive: $isActive) {
+        NavigationLink(destination: UserDetailView(inputImage: $newImage).environmentObject(userDetailViewModel), isActive: $userDetailViewModel.isActive) {
             HStack() {
                 AsyncImage(url: userDetailViewModel.user.getAvatarUrl(.medium),
                            placeholder: DefaultImageView(), newImage: $newImage,
